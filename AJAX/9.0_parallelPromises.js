@@ -33,9 +33,9 @@ async function getUserInfos(id,id2,id3){
     let c = await getUserInfo(id3)//6
     console.log(a,b,c)
 }
+getUserInfos(1,2,3)
 
 
-//getUserInfos(1,2,3)
 // async function getUsersInfo(id,id2,id3){
 //     let info = await Promise.all([
 //         getUserInfo(id),
@@ -47,13 +47,13 @@ async function getUserInfos(id,id2,id3){
 // getUsersInfo(1,2,3)
 
 
-// Promise.all()
-async function getUserss(){
-   let data = await Promise.all([
-        Promise.resolve('hello'),
-        Promise.resolve('Bye'),
-        Promise.resolve('hello2'),
-   ])
-   console.log(data)
-}
-getUserss()
+// // Promise.all()
+// async function getUserss(){
+//    let data = await Promise.all([
+//         Promise.resolve('hello'),
+//         Promise.resolve('Bye'),
+//         Promise.resolve('hello2'),
+//    ])
+//    console.log(data)
+// }
+// getUserss()

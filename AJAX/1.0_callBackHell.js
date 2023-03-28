@@ -1,4 +1,4 @@
-//AJAX => Asynchronous javascript
+//AJAX => Asynchronous javascript and xml
 
 //javascript => sysnchronous
 //line by line extecution
@@ -49,7 +49,7 @@
 
 // function createGetPrint() {
 //     setTimeout(() => {
-//         console.log('Create 10 users')
+//         console.log('Create  users')
 //     }, 3000)
 
 //     setTimeout(() => {

@@ -101,16 +101,16 @@
     // and give error if first occurance is rejected promise
 
 
-// async function getUser6() {
-//     let result6 = await Promise.race([
-//                 Promise.reject('first resolve'),
-//                 Promise.resolve('second resolved'),
-//                 Promise.reject('first rejected'),
-//                 Promise.reject('second rejected')
-//             ])
-//     console.log(result6) // first reject
-// }
-// getUser6()
+async function getUser6() {
+    let result6 = await Promise.race([
+                Promise.reject('first resolve'),
+                Promise.resolve('second resolved'),
+                Promise.reject('first rejected'),
+                Promise.reject('second rejected')
+            ])
+    console.log(result6) // error
+}
+getUser6()
 
 // async function getUser7() {
 //     let result7 = await Promise.race([
@@ -145,47 +145,47 @@
 
 // will give first resolved promise occured , did nt get affected by rejected promise
 
-async function getUser8() {
-    let result8 = await Promise.any([
-                Promise.reject('first rejected'),
-                Promise.reject('second rejected'),
-                Promise.reject('third rejected'),
-                Promise.resolve('first resolved')
-            ])
-    console.log(result8) // first resolved
+// async function getUser8() {
+//     let result8 = await Promise.any([
+//                 Promise.reject('first rejected'),
+//                 Promise.reject('second rejected'),
+//                 Promise.reject('third rejected'),
+//                 Promise.resolve('first resolved')
+//             ])
+//     console.log(result8) // first resolved
 
-}
-getUser8()
+// }
+// getUser8()
 
-//4. promise.any([])
+// //4. promise.any([])
 
-async function getUser9() {
-    let result9 = await Promise.any([
-        new Promise(function (reject) {
-            setTimeout(function () {
-                reject('first rejected')
-            }, 1000)
-        }),
-        new Promise(function ( reject) {
-            setTimeout(function () {
-                reject('second rejected')
-            }, 2000)
-        }),
-        new Promise(function (resolve) {
-            setTimeout(function () {
-                resolve('first resolved')
-            }, 3000)
-        }),
-        new Promise(function (resolve) {
-            setTimeout(function () {
-                resolve('second resolved')
-            }, 4000)
-        })
+// async function getUser9() {
+//     let result9 = await Promise.any([
+//         new Promise(function (reject) {
+//             setTimeout(function () {
+//                 reject('first rejected')
+//             }, 1000)
+//         }),
+//         new Promise(function ( reject) {
+//             setTimeout(function () {
+//                 reject('second rejected')
+//             }, 2000)
+//         }),
+//         new Promise(function (resolve) {
+//             setTimeout(function () {
+//                 resolve('first resolved')
+//             }, 3000)
+//         }),
+//         new Promise(function (resolve) {
+//             setTimeout(function () {
+//                 resolve('second resolved')
+//             }, 4000)
+//         })
         
-    ])
-    console.log(result9)
-}
-getUser9()
+//     ])
+//     console.log(result9)
+// }
+// getUser9()
 
 
 

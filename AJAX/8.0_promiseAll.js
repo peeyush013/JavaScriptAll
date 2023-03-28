@@ -36,7 +36,7 @@ async function getUserInfos(id,id2,id3){
 }
 
 
-//getUserInfos(1,2,3)                 // will give sync result one by one 
+getUserInfos(1,2,3)                 // will give sync result one by one 
 // hence will consume more time to execute 
 // it is only useful if ids are dependent on each other
 
